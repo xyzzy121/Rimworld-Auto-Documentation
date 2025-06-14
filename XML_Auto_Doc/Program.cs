@@ -12,7 +12,7 @@ namespace XML_Auto_Doc
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(msg);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("\nPress any key to exit.");
+            Console.WriteLine("\nFATAL ERROR!\nPress any key to exit.");
             Console.ReadKey();
             Environment.Exit(-1);
         }
@@ -25,7 +25,7 @@ namespace XML_Auto_Doc
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(title);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Created by Epicguru. Based on original by milon.\n");
+            Console.WriteLine("Created by Epicguru. Based on original by milon. Slightly tweaked by Xyzzy121.\n");
 
             if (args.Length < 2)
             {
@@ -43,6 +43,7 @@ namespace XML_Auto_Doc
             var gen = new HtmlGen();
             
             File.WriteAllText(output, gen.Generate(parser, version, LOCAL_MODE));
+            Console.WriteLine("All Done!");
             Console.ReadLine();
             return 0;
         }

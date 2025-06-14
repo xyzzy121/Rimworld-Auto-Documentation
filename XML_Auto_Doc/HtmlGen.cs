@@ -1,4 +1,5 @@
 ﻿using ShellProgressBar;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -152,7 +153,7 @@ namespace XML_Auto_Doc
             str.AppendLine("</div>");
 
             str.Append("</body>");
-
+            Console.WriteLine("Finished HTML Gen!");
             return str.ToString();
         }
     }
